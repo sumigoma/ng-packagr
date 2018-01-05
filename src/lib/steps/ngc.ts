@@ -31,7 +31,7 @@ export const prepareTsConfig: BuildStep =
     tsConfig.options.basePath = basePath;
     tsConfig.options.baseUrl = basePath;
     tsConfig.options.rootDir = basePath;
-    tsConfig.options.outDir = artefacts.outDir;
+    tsConfig.options.outDir = basePath; // artefacts.outDir;
     tsConfig.options.genDir = artefacts.outDir;
 
     switch (entryPoint.jsxConfig) {
@@ -204,9 +204,22 @@ export async function ngc(entryPoint: NgEntryPoint, artefacts: NgArtefacts) {
 
   // ng.CompilerHost
   const tsConfig = artefacts.tsConfig;
+
+  const tsCompilerHost = compilerHostFromArtefacts(artefacts);
+  tsCompilerHost.writeFile = (
+    fileName: string,
+    data: string,
+    writeByteOrderMark: boolean,
+    onError?: (message: string) => void,
+    sourceFiles?: ReadonlyArray<ts.SourceFile>
+  ): void => {
+    debugger;
+
+  }
+
   const ngCompilerHost = ng.createCompilerHost({
     options: tsConfig.options,
-    tsHost: compilerHostFromArtefacts(artefacts)
+    tsHost: tsCompilerHost
   });
 
   // ng.Program
