@@ -46,6 +46,10 @@ export interface NgPackageConfig {
          * Embed assets in css file using data URIs - see https://css-tricks.com/data-uris
          */
         cssUrl?: "none" | "inline";
+        /**
+         * Set typescript language level, i.e. tsconfig.lib. This will enable accessing typescript features available in es2016, es2017, etc.
+         */
+        languageLevel?: string[];
         [k: string]: any;
     };
 }
