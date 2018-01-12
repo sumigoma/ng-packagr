@@ -52,7 +52,6 @@ export declare class NgEntryPoint {
     readonly embedded: string[];
     readonly jsxConfig: string;
     readonly flatModuleFile: string;
-    readonly languageLevel: string[];
     /**
      * The module ID is an "identifier of a module used in the import statements, e.g.
      * '@angular/core'. The ID often maps directly to a path on the filesystem, but this

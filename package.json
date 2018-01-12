@@ -1,0 +1,58 @@
+{
+  "name": "ng-packagr",
+  "version": "2.0.0-rc.10",
+  "description": "Compile and package a TypeScript library to Angular Package Format",
+  "keywords": [
+    "angular",
+    "angular2",
+    "angular4",
+    "angular-library",
+    "angular-components",
+    "component-library",
+    "typescript",
+    "css",
+    "scss",
+    "html"
+  ],
+  "author": "David Herges <david@spektrakel.de>",
+  "license": "MIT",
+  "repository": "https://github.com/dherges/ng-packagr.git",
+  "homepage": "https://github.com/dherges/ng-packagr",
+  "bugs": {
+    "url": "https://github.com/dherges/ng-packagr/issues"
+  },
+  "bin": {
+    "ng-packagr": "./cli/main.js"
+  },
+  "main": "./public_api.js",
+  "typings": "./public_api.d.ts",
+  "dependencies": {
+    "@ngtools/json-schema": "^1.1.0",
+    "autoprefixer": "^7.1.1",
+    "browserslist": "^2.1.5",
+    "commander": "^2.12.0",
+    "cpx": "^1.5.0",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "injection-js": "^2.2.1",
+    "less": "^2.7.2",
+    "node-sass": "^4.5.3",
+    "node-sass-tilde-importer": "^1.0.0",
+    "postcss": "^6.0.2",
+    "postcss-url": "^7.3.0",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.53.0",
+    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rxjs": "^5.5.0",
+    "sorcery": "^0.10.0",
+    "stylus": "^0.54.5",
+    "uglify-js": "^3.0.7"
+  },
+  "peerDependencies": {
+    "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "tsickle": ">=0.25.5",
+    "typescript": ">=2.4.2"
+  }
+}
